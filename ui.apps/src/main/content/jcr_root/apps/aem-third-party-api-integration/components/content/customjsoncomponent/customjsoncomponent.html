@@ -1,0 +1,45 @@
+<sly data-sly-use.provider="et.com.aem.core.models.ProviderModel">
+  <h2>${provider.title}</h2>
+  <div class="provider-container">
+    <h2>Providers Information</h2>
+    <ul class="provider-list">
+      <sly data-sly-list.provider="${provider.providers}">
+        <li class="provider-item">
+          <img src="${provider.image}" alt="${provider.firstName} ${provider.lastName}" />
+          <div class="provider-item-details">
+            <h3>${provider.firstName} ${provider.middleName} ${provider.lastName}</h3>
+            <p>${provider.specialty}</p>
+            <p class="facility">${provider.facility}</p>
+            <p><a href="${provider.directionsUrl}" class="contact-info">Directions</a> | <a href="tel:${provider.phone}" class="contact-info">${provider.phone}</a></p>
+            <p>Accepting new patients.</p>
+            <p>Plans accepted: ${provider.plansAccepted}</p>
+            <div class="provider-item-reviews">
+              <h4>Reviews:</h4>
+              <ul class="provider-reviews-list">
+                <sly data-sly-list.review="${provider.reviews}">
+                  <li class="provider-reviews-item">
+                    <p>Rating: ${review.rating}</p>
+                    <p>Comment: ${review.comment}</p>
+                    <p>Author: ${review.author}</p>
+                  </li>
+                </sly>
+              </ul>
+            </div>
+            <div class="provider-item-services">
+              <h4>Services:</h4>
+              <ul class="provider-services-list">
+                <sly data-sly-list.service="${provider.services}">
+                  <li class="provider-services-item">
+                    <p>Name: ${service.name}</p>
+                    <p>Description: ${service.description}</p>
+                    <p>Price: ${service.price}</p>
+                  </li>
+                </sly>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </sly>
+    </ul>
+  </div>
+</sly>

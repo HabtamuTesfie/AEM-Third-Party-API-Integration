@@ -1,0 +1,97 @@
+/* Styles for the Providers Information container */
+.provider-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center; /* Center align content */
+}
+
+.provider-container h2 {
+  margin-bottom: 20px;
+}
+
+/* Styles for the providers list */
+.provider-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles for each provider item */
+.provider-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.provider-item:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.provider-item img {
+  max-width: 150px;
+  border-radius: 5px;
+  margin-right: 15px;
+  height: auto;
+}
+
+.provider-item-details {
+  flex: 1;
+}
+
+.provider-item-details h3 {
+  margin: 0;
+  font-size: 1.25em;
+  color: #0073e6;
+}
+
+.provider-item-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.provider-item-details .facility {
+  font-weight: bold;
+  color: #333;
+}
+
+.provider-item-details .contact-info {
+  color: #0073e6;
+  margin: 10px 0;
+}
+
+.provider-item-reviews,
+.provider-item-services {
+  margin-top: 15px;
+}
+
+.provider-item-reviews h4,
+.provider-item-services h4 {
+  margin: 0 0 10px 0;
+}
+
+/* Styles for the reviews and services lists */
+.provider-reviews-list,
+.provider-services-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.provider-reviews-item,
+.provider-services-item {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.provider-reviews-item p,
+.provider-services-item p {
+  margin: 5px 0;
+}
