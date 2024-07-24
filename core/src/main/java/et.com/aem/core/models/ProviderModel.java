@@ -2,7 +2,7 @@ package et.com.aem.core.models;
 
 import com.google.gson.Gson;
 import et.com.aem.core.api.MedicalProvider;
-import et.com.aem.core.api.ProviderDTO;
+import et.com.aem.core.api.MedicalProviders;
 import et.com.aem.core.services.ProviderService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -30,9 +30,9 @@ public class ProviderModel {
 
     @PostConstruct
     protected void init() {
-        ProviderDTO providerDTO = providerService.getProviderData();
-        if (providerDTO != null && !providerDTO.getMedicalProviders().isEmpty()) {
-            this.providers = providerDTO.getMedicalProviders();
+        MedicalProviders medicalProviders = providerService.getProviderData();
+        if (medicalProviders != null && !medicalProviders.getMedicalProviders().isEmpty()) {
+            this.providers = medicalProviders.getMedicalProviders();
             LOG.info("Provider data initialized: {}", new Gson().toJson(providers));
         } else {
             LOG.error("Received empty or null JSON data from the provider service");

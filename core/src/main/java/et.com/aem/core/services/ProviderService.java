@@ -1,8 +1,8 @@
 package et.com.aem.core.services;
 
 
-import et.com.aem.core.api.ProviderDTO;
+import et.com.aem.core.api.MedicalProviders;
 
 public interface ProviderService {
-    ProviderDTO getProviderData();
+    MedicalProviders getProviderData();
 }

@@ -1,7 +1,7 @@
 package et.com.aem.core.services;
 
 import com.google.gson.Gson;
-import et.com.aem.core.api.ProviderDTO;
+import et.com.aem.core.api.MedicalProviders;
 import et.com.aem.core.config.ProviderServiceConfig;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -33,7 +33,7 @@ public class ProviderServiceImpl implements ProviderService {
     }
 
     @Override
-    public ProviderDTO getProviderData() {
+    public MedicalProviders getProviderData() {
         LOG.info("The provided url is {}", providerApiUrl);
         String jsonData = "";
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
@@ -49,6 +49,6 @@ public class ProviderServiceImpl implements ProviderService {
         }
 
         Gson gson = new Gson();
-        return gson.fromJson(jsonData, ProviderDTO.class);
+        return gson.fromJson(jsonData, MedicalProviders.class);
     }
 }

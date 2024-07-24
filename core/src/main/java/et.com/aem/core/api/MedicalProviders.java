@@ -3,7 +3,7 @@ package et.com.aem.core.api;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
-public class ProviderDTO {
+public class MedicalProviders {
     @SerializedName("medical_providers")
     private List<MedicalProvider> medicalProviders;
 
